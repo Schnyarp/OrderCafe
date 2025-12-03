@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>order.cafe — Premium Domain For Sale</title>
+  <meta name="description" content="order.cafe — premium domain ideal for cafe ordering, coffee-shop apps, POS integrations, delivery & pickup services, and local cafe marketplaces. Submit an offer to purchase." />
+  <meta property="og:title" content="order.cafe — Premium Domain For Sale" />
+  <meta property="og:description" content="order.cafe — premium domain ideal for cafe ordering, coffee-shop apps, POS integrations and local hospitality platforms. Contact domain@order.cafe" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#4b2e21" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{
+      --max-width:980px;
+      --content-width:760px;
+      --panel: rgba(255,255,255,0.98);
+      --muted: #7a6b62;
+      --accent: #b35d2c;      /* coffee-caramel */
+      --accent-2: #e8c07a;    /* foam/golden */
+      --text: #2a1f1a;
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:28px;
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+
+      /* warm coffee-inspired background */
+      background:
+        radial-gradient(1200px 400px at 10% 10%, rgba(232,192,122,0.06), transparent 12%),
+        linear-gradient(180deg, #fff8f1 0%, #f3e4d9 40%, #e7dbcf 100%);
+      background-attachment: fixed;
+    }
+
+    /* repeated subtle coffee bean motif (SVG data URL) */
+    .beans {
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      background-image:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g fill='none' fill-rule='evenodd'><path d='M22 18c5-6 18-6 23 0 4 5 4 12 0 17-5 6-18 6-23 0-4-5-4-12 0-17z' fill='%234b2e21' opacity='0.12'/><path d='M29 16c0 0 6 3 8 7' stroke='%23fff' stroke-opacity='0.06' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></g></svg>");
+      background-repeat: repeat;
+      background-size: 220px 220px;
+      opacity:0.75;
+      mix-blend-mode: multiply;
+    }
+
+    /* floating steam shapes to evoke aroma */
+    .steam {
+      position:fixed;
+      left:10%;
+      top:12%;
+      width:160px;
+      height:220px;
+      pointer-events:none;
+      z-index:0;
+      filter: blur(10px);
+      opacity:0.12;
+      background:
+        radial-gradient(ellipse at 30% 20%, rgba(232,192,122,0.22) 0 12%, transparent 30%),
+        radial-gradient(ellipse at 70% 40%, rgba(75,46,33,0.06) 0 10%, transparent 28%);
+      animation: steamRise 8s linear infinite;
+    }
+    .steam.s2 { left:75%; top:22%; width:140px; height:180px; animation-duration:10s; opacity:0.1; transform: scaleX(-1); }
+    @keyframes steamRise{
+      0% { transform: translateY(0) scale(1); opacity:0.10; }
+      50%{ transform: translateY(-20px) scale(1.03); opacity:0.18; }
+      100%{ transform: translateY(0) scale(1); opacity:0.10; }
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      padding:34px;
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.995), rgba(255,254,250,0.995));
+      box-shadow: 0 28px 64px rgba(20,20,20,0.06);
+      border: 1px solid rgba(20,20,20,0.03);
+      position:relative;
+      z-index:1;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:22px;
+    }
+
+    .brand{ display:flex; gap:14px; align-items:center; }
+    .logo{
+      width:72px;
+      height:72px;
+      border-radius:14px;
+      background: linear-gradient(135deg,#6b3f2a,#b35d2c);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:800;
+      font-size:20px;
+      box-shadow: 0 10px 28px rgba(75,46,33,0.12);
+      flex-shrink:0;
+    }
+
+    h1{ margin:0; font-size:26px; color:var(--text); }
+    p.lead{ margin:6px 0 0; color:var(--muted); font-size:14px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:start;
+    }
+
+    .hero {
+      background: linear-gradient(90deg, rgba(179,93,44,0.04), rgba(232,192,122,0.02));
+      padding:14px 16px;
+      border-radius:12px;
+      color:var(--accent);
+      margin-bottom:16px;
+      border:1px solid rgba(179,93,44,0.06);
+    }
+    .hero p{ margin:0; font-size:14px; color:var(--accent); }
+
+    .panel {
+      background: var(--panel);
+      color:var(--text);
+      padding:22px;
+      border-radius:14px;
+      box-shadow: 0 8px 26px rgba(20,20,20,0.04);
+      border: 1px solid rgba(20,20,20,0.02);
+      max-width:var(--content-width);
+    }
+
+    h2{ margin-top:0; font-size:20px; color:var(--text); }
+    .features ul{ margin:0; padding-left:18px; color:var(--muted); }
+    .features li{ margin-bottom:10px; }
+
+    .cta-row{ display:flex; gap:12px; margin-top:18px; flex-wrap:wrap; align-items:center; }
+    .btn{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 16px;
+      border-radius:999px;
+      font-weight:700;
+      cursor:pointer;
+      text-decoration:none;
+      border:0;
+    }
+    .btn-primary{
+      background: linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#071217;
+      box-shadow: 0 10px 30px rgba(179,93,44,0.12);
+    }
+    .btn-ghost{
+      background:transparent;
+      border:1px solid rgba(20,20,20,0.06);
+      color:var(--muted);
+    }
+
+    .price { margin-top:16px; font-weight:700; color:var(--text); font-size:18px; }
+    .muted-small { color:var(--muted); font-size:13px; margin-top:6px; }
+
+    .contact-card{
+      position:sticky;
+      top:32px;
+      align-self:start;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.94));
+      padding:18px;
+      border-radius:12px;
+      border:1px solid rgba(20,20,20,0.03);
+      box-shadow: 0 8px 26px rgba(20,20,20,0.035);
+      max-width:360px;
+    }
+
+    .contact-card h3{ margin:0 0 8px 0; font-size:16px; color:var(--text); }
+    .contact-email, .contact-email a{
+      white-space:nowrap;
+      display:inline-block;
+      font-weight:700;
+      color:var(--accent);
+      word-break: normal;
+      font-size:0.98rem;
+    }
+
+    form label{ display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    form input, form textarea {
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid rgba(20,20,20,0.06);
+      background:#fff;
+      color:var(--text);
+      font-size:14px;
+      margin-bottom:12px;
+    }
+    form textarea{ min-height:110px; resize:vertical; }
+
+    footer{ margin-top:18px; color:var(--muted); font-size:13px; text-align:center; }
+
+    @media (max-width:880px){
+      .grid{ grid-template-columns: 1fr; gap:18px; }
+      .contact-card{ position:relative; top:auto; width:100%; max-width:none; }
+      .container{ padding:20px; }
+      .logo{ width:64px; height:64px; border-radius:12px; }
+      h1{ font-size:22px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "url":"https://order.cafe",
+        "name":"order.cafe",
+        "description":"order.cafe — premium domain for cafe ordering, pickup & delivery systems, POS integrations and local coffee marketplaces."
+      },
+      {
+        "@type":"ContactPoint",
+        "contactType":"sales",
+        "email":"domain@order.cafe"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="beans" aria-hidden="true"></div>
+  <div class="steam" aria-hidden="true"></div>
+  <div class="steam s2" aria-hidden="true"></div>
+
+  <main class="container" role="main" aria-labelledby="main-heading">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">OC</div>
+        <div>
+          <h1 id="main-heading">order.cafe</h1>
+          <p class="lead">Premium domain for cafe ordering, pickup & delivery, POS integrations and coffee-shop marketplaces.</p>
+        </div>
+      </div>
+
+      <div style="text-align:right">
+        <div style="color:var(--muted);font-size:13px">For inquiries</div>
+        <div class="contact-email"><a href="mailto:domain@order.cafe" style="color:inherit;text-decoration:none">domain@order.cafe</a></div>
+      </div>
+    </header>
+
+    <div class="hero" role="note" aria-live="polite">
+      <p>
+        Order.cafe blends clear transactional intent with a cafe-first focus — great for point-of-sale integrations, mobile ordering, delivery & pickup flows, or local coffee marketplaces.
+      </p>
+    </div>
+
+    <section class="grid" aria-label="Main content">
+      <div>
+        <article class="panel" aria-labelledby="why-title">
+          <h2 id="why-title">Why order.cafe?</h2>
+          <p class="lead">Short, actionable and category-specific — ideal for products and services that help cafes take orders, manage pickups, handle POS, and deliver memorable customer experiences.</p>
+
+          <div class="features" style="margin-top:12px">
+            <ul>
+              <li>Direct and market-focused — great for discoverability by cafes and customers</li>
+              <li>Fits ordering systems, pickup apps, POS integrations, loyalty & local marketplaces</li>
+              <li>Memorable and easy to promote in local marketing and social campaigns</li>
+            </ul>
+
+            <p style="margin-top:12px"><a href="https://corelli.com/domains.html" style="color:var(--accent)">How to Choose A Domain Name</a></p>
+          </div>
+
+          <div class="cta-row" role="group" aria-label="Actions">
+            <a class="btn btn-primary" href="#" id="inquireBtn">Make an Offer</a>
+            <a class="btn btn-ghost" href="mailto:domain@order.cafe?subject=Domain%20Offer%20-%20order.cafe">Email Now</a>
+          </div>
+
+          <div class="price">Domain: order.cafe</div>
+          <div class="muted-small">Serious offers only. Transfer via escrow recommended for security and trust.</div>
+        </article>
+
+        <article class="panel" style="margin-top:18px" aria-labelledby="about-title">
+          <h3 id="about-title" style="margin-top:0">About this domain</h3>
+          <p class="lead">order.cafe is perfect for developers and founders building cafe-first commerce: ordering widgets, pickup & delivery flows, menu platforms, POS integrations, and neighborhood coffee marketplaces.</p>
+
+          <ul style="color:var(--muted);margin-top:12px">
+            <li>Great for ordering apps, POS integrations and cafe marketplaces</li>
+            <li>Useful for loyalty programs, menu management and last-mile delivery services</li>
+            <li>Transfer-ready — we recommend escrow to ensure a safe and secure transaction</li>
+          </ul>
+        </article>
+      </div>
+
+      <aside class="contact-card" aria-label="Contact & offer">
+        <div>
+          <h3 style="margin-top:0">Contact & Offer</h3>
+          <p style="margin-top:6px;color:var(--muted)">Submit an offer — this form will open your email client with the details prefilled. Or email <a href="mailto:domain@order.cafe" class="contact-email">domain@order.cafe</a>.</p>
+
+          <form id="inquiryForm" onsubmit="handleSubmit(event)" aria-label="Domain offer form">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="offer">Your offer (USD)</label>
+            <input id="offer" name="offer" type="text" placeholder="Enter your offer (USD)" required />
+
+            <label for="company">Company (optional)</label>
+            <input id="company" name="company" type="text" placeholder="Your company or organization" />
+
+            <label for="country">Country</label>
+            <input id="country" name="country" type="text" placeholder="Your country" required />
+
+            <label for="phone">Phone number (optional)</label>
+            <input id="phone" name="phone" type="tel" />
+
+            <label for="message">Message (questions, timeline, escrow preference)</label>
+            <textarea id="message" name="message" placeholder="Hi — I'm submitting an offer for order.cafe. Please share transfer instructions and next steps."></textarea>
+
+            <button class="btn btn-primary" type="submit" style="width:100%; margin-top:6px">Send Offer</button>
+          </form>
+
+          <footer style="margin-top:10px; text-align:left; color:var(--muted); font-size:13px">
+            Prefer a direct email? <a href="mailto:domain@order.cafe" style="color:var(--accent)" class="contact-email">domain@order.cafe</a>
+          </footer>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      &copy; 2025 order.cafe. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // Compose a mailto: URL from form contents to open the user's email client.
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const offer = document.getElementById('offer').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const country = document.getElementById('country').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Domain Offer - order.cafe');
+      const bodyText =
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Company: ${company || '(not provided)'}\n` +
+        `Offer (USD): ${offer}\n` +
+        `Country: ${country}\n` +
+        `Phone: ${phone || '(not provided)'}\n\n` +
+        `Message:\n${message}\n\n---\nSent from order.cafe offer form`;
+
+      const body = encodeURIComponent(bodyText);
+      const mailto = `mailto:domain@order.cafe?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+    }
+
+    document.getElementById('inquireBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const form = document.getElementById('inquiryForm');
+      if(window.innerWidth < 900){
+        form.scrollIntoView({behavior:'smooth', block:'center'});
+        form.querySelector('input').focus();
+      } else {
+        const subject = encodeURIComponent('Domain Offer - order.cafe');
+        const body = encodeURIComponent('Hi — I would like to make an offer for order.cafe. Please reply with transfer instructions and next steps.');
+        window.location.href = `mailto:domain@order.cafe?subject=${subject}&body=${body}`;
+      }
+    });
+  </script>
+</body>
+</html>
