@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Order.cafe — Premium Domain For Sale</title>
+  <meta name="description" content="Order.cafe — premium domain ideal for cafe ordering platforms, coffee shop POS, pickup & delivery apps, and cafe marketplaces. Submit an offer to purchase." />
+  <meta property="og:title" content="Order.cafe — Premium Domain For Sale" />
+  <meta property="og:description" content="Order.cafe — brandable domain for cafe ordering, takeaway services, food-tech, and cafe loyalty platforms. Contact domain@order.cafe" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#f6efe9" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{
+      --max-width:1120px;
+      --bg-top:#fff7f1;
+      --bg-bottom:#efe8e0;
+      --panel:#ffffff;
+      --muted:#6a6b6d;
+      --ink:#1b2a2a;
+      --coffee:#8b5e3c;
+      --cream:#fff4e8;
+      --accent:#d88646;
+      --shadow: 0 28px 90px rgba(18,22,24,0.06);
+      --radius:18px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:36px 20px;
+      color:var(--ink);
+      background:
+        radial-gradient(700px 240px at 12% 12%, rgba(216,140,78,0.03), transparent 12%),
+        linear-gradient(180deg,var(--bg-top) 0%, var(--bg-bottom) 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      overflow-x:hidden;
+    }
+
+    /* Look chosen: "Modern Coffee Counter"
+       - warm coffee-shop palette with a cream counter band, subtle tile texture, and latte art spotlight
+       - friendly, product-focused: works well for ordering flows, POS, pickup & loyalty apps
+       - floating badges: coffee cup, croissant, to-go bag, location pin
+       - decorative layers are non-interactive (pointer-events:none)
+    */
+    .bg { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:visible; }
+
+    .counter-band {
+      position:fixed;
+      left:50%;
+      top:8%;
+      transform:translateX(-50%);
+      width:1100px;
+      height:320px;
+      border-radius:20px;
+      z-index:0;
+      pointer-events:none;
+      background:
+        linear-gradient(180deg, rgba(255,244,236,0.98), rgba(255,241,232,0.95)),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1100' height='320'><g fill='%23000000' fill-opacity='0.02'><rect x='12' y='18' width='120' height='18' rx='6'/><rect x='152' y='18' width='120' height='18' rx='6'/></g></svg>");
+      background-repeat:repeat-x;
+      opacity:0.98;
+      mix-blend-mode:screen;
+      box-shadow: inset 0 28px 64px rgba(0,0,0,0.04);
+    }
+
+    .tile {
+      position:fixed;
+      left:50%;
+      top:6%;
+      transform:translateX(-50%);
+      width:1100px;
+      height:120px;
+      z-index:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(transparent 0 1px, rgba(0,0,0,0.02) 1px),
+        linear-gradient(90deg, transparent 0 1px, rgba(0,0,0,0.02) 1px);
+      background-size:100% 36px, 36px 100%;
+      opacity:0.03;
+      border-radius:20px;
+    }
+
+    .latte-spot {
+      position:fixed;
+      left:50%;
+      top:12%;
+      transform:translateX(-50%);
+      width:520px;
+      height:200px;
+      z-index:0;
+      pointer-events:none;
+      background: radial-gradient(closest-side, rgba(216,140,78,0.06), rgba(216,140,78,0.01) 40%);
+      filter: blur(8px);
+      opacity:0.95;
+      mix-blend-mode:screen;
+    }
+
+    .floaters { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:visible; }
+
+    .badge {
+      position:absolute;
+      width:72px;
+      height:72px;
+      background-size:contain;
+      background-repeat:no-repeat;
+      opacity:0.12;
+      will-change:transform,opacity;
+      filter: drop-shadow(0 12px 28px rgba(0,0,0,0.06));
+    }
+
+    @keyframes floaty {
+      0% { transform: translateY(0) rotate(-6deg); }
+      50% { transform: translateY(-16px) rotate(6deg); }
+      100% { transform: translateY(0) rotate(-6deg); }
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      padding:32px;
+      border-radius:20px;
+      background: linear-gradient(180deg,#ffffff,#fffdf9);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.03);
+      position:relative;
+      z-index:2;
+    }
+
+    header{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:12px;
+    }
+
+    .brand{ display:flex; gap:12px; align-items:center; }
+    .logo{
+      width:84px;
+      height:84px;
+      border-radius:14px;
+      background: linear-gradient(135deg,var(--coffee), #b87a4b);
+      color:var(--cream);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      font-size:20px;
+      box-shadow: 0 12px 34px rgba(0,0,0,0.06);
+      flex-shrink:0;
+    }
+
+    h1{ margin:0; font-size:24px; color:var(--ink); }
+    p.lead{ margin:6px 0 0; color:var(--muted); font-size:14px; max-width:780px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:24px;
+      align-items:start;
+      margin-top:14px;
+    }
+
+    .hero {
+      padding:18px;
+      border-radius:12px;
+      color:var(--ink);
+      border:1px solid rgba(0,0,0,0.04);
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      background: linear-gradient(90deg, rgba(216,140,78,0.02), rgba(187,118,80,0.01));
+    }
+    .hero h2{ margin:0 0 8px 0; font-size:20px; color:var(--coffee); }
+    .hero p{ margin:0; color:var(--muted); }
+
+    .panel {
+      background: var(--panel);
+      color:var(--ink);
+      padding:20px;
+      border-radius:12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    h2.section { margin-top:0; font-size:18px; color:var(--accent); }
+    .features ul{ margin:0; padding-left:18px; color:var(--muted); }
+    .features li{ margin-bottom:10px; }
+
+    .samples { display:flex; gap:10px; margin-top:12px; flex-wrap:wrap; }
+    .sample {
+      min-width:120px;
+      padding:10px;
+      border-radius:10px;
+      background: linear-gradient(180deg,#fff,#fbfbfb);
+      border:1px solid rgba(0,0,0,0.03);
+      color:var(--muted);
+      font-weight:700;
+      text-align:center;
+    }
+
+    .cta-row{ display:flex; gap:12px; margin-top:12px; flex-wrap:wrap; align-items:center; }
+    .btn{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:800;
+      cursor:pointer;
+      text-decoration:none;
+      border:0;
+      color:#fff;
+    }
+    .btn-primary{
+      background: linear-gradient(90deg,var(--accent), var(--coffee));
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+    .btn-ghost{
+      background:transparent;
+      border:1px solid rgba(0,0,0,0.06);
+      color:var(--muted);
+    }
+
+    .contact-card{
+      position:sticky;
+      top:28px;
+      align-self:start;
+      background: linear-gradient(180deg,#ffffff,#fbfbfb);
+      padding:16px;
+      border-radius:12px;
+      border:1px solid rgba(0,0,0,0.03);
+      box-shadow: 0 8px 26px rgba(0,0,0,0.04);
+      max-width:360px;
+    }
+
+    .contact-card h3{ margin:0 0 8px 0; font-size:16px; color:var(--coffee); }
+    .contact-email, .contact-email a{
+      display:inline-block;
+      font-weight:800;
+      color:var(--accent);
+      font-size:0.98rem;
+      text-decoration:none;
+    }
+
+    form label{ display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    form input, form textarea {
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid rgba(0,0,0,0.06);
+      background:#fff;
+      color:var(--ink);
+      font-size:14px;
+      margin-bottom:12px;
+    }
+    form textarea{ min-height:110px; resize:vertical; }
+
+    .resources { margin-top:12px; font-size:13px; color:var(--muted); border-top:1px dashed rgba(0,0,0,0.04); padding-top:12px; }
+    .resources a { color:var(--coffee); font-weight:700; text-decoration:none }
+
+    footer{ margin-top:18px; color:var(--muted); font-size:13px; text-align:center }
+
+    @media (max-width:980px){
+      .grid{ grid-template-columns: 1fr; gap:16px; }
+      .contact-card{ position:relative; top:auto; width:100%; max-width:none; }
+      .container{ padding:20px; }
+      .logo{ width:72px; height:72px; border-radius:12px; }
+      h1{ font-size:20px; }
+      .counter-band, .tile, .latte-spot, .floaters { display:none; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "url":"https://order.cafe",
+        "name":"Order.cafe",
+        "description":"Order.cafe — premium domain for cafe ordering, pickup/delivery apps, POS systems, and coffee marketplaces."
+      },
+      {
+        "@type":"ContactPoint",
+        "contactType":"sales",
+        "email":"domain@order.cafe"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="counter-band" aria-hidden="true"></div>
+    <div class="tile" aria-hidden="true"></div>
+    <div class="latte-spot" aria-hidden="true"></div>
+    <div class="floaters" id="floaters" aria-hidden="true"></div>
+  </div>
+
+  <main class="container" role="main" aria-labelledby="main-heading">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">OC</div>
+        <div>
+          <h1 id="main-heading">Order.cafe</h1>
+          <p class="lead">Premium domain for cafe ordering, pickup & delivery apps, coffee shop POS, and cafe marketplaces.</p>
+        </div>
+      </div>
+
+      <div style="text-align:right">
+        <div style="color:var(--muted);font-size:13px">For inquiries</div>
+        <div class="contact-email"><a href="mailto:domain@order.cafe">domain@order.cafe</a></div>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="Main content">
+      <div>
+        <div class="hero" role="note" aria-live="polite" aria-labelledby="hero-title">
+          <div>
+            <h2 id="hero-title">A straightforward, brandable name for cafe ordering</h2>
+            <p>Order.cafe reads like the product — ideal for mobile ordering, in-store pickup, cafe marketplaces, loyalty integrations and lightweight POS solutions aimed at coffee shops and small cafes.</p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#" id="inquireBtn">Make an Offer</a>
+              <a class="btn btn-ghost" href="mailto:domain@order.cafe?subject=Domain%20Offer%20-%20Order.cafe">Email Now</a>
+            </div>
+          </div>
+
+          <div style="min-width:180px; text-align:center">
+            <div style="color:var(--muted); font-size:13px">Domain</div>
+            <div style="font-weight:900; font-size:18px; margin-top:6px">Order.cafe</div>
+            <div style="color:var(--muted); font-size:13px; margin-top:8px">Serious offers only.</div>
+          </div>
+        </div>
+
+        <article class="panel" aria-labelledby="why-title" style="margin-top:16px">
+          <h2 id="why-title" class="section">Why Order.cafe?</h2>
+          <p class="lead">A short, friendly domain that maps directly to ordering flows for cafes and small food & beverage shops. Great for consumer apps, merchant POS integrations, enterprise cafe tech and local pickup marketplaces.</p>
+
+          <div class="features" style="margin-top:12px">
+            <ul>
+              <li>Category-first — communicates ordering intent clearly to users and partners</li>
+              <li>Works for mobile apps, web ordering, POS integrations, loyalty & subscription offerings</li>
+              <li>Brandable across store signage, app icons, marketing and partner integrations</li>
+            </ul>
+          </div>
+
+          <div class="samples" aria-hidden="false">
+            <div class="sample">Mobile Ordering App</div>
+            <div class="sample">Cafe POS Integration</div>
+            <div class="sample">Pickup & Delivery Marketplace</div>
+            <div class="sample">Loyalty & Subscription</div>
+          </div>
+        </article>
+
+        <article class="panel" style="margin-top:16px" aria-labelledby="about-title">
+          <h3 id="about-title" style="margin-top:0">About this domain</h3>
+          <p class="lead">Order.cafe is a premium domain available for transfer.</p>
+
+          <ul style="color:var(--muted);margin-top:12px">
+            <li>Well-suited to founders, cafe chains, POS vendors, and food-tech startups</li>
+            <li>Useful for integrations with payment providers, delivery partners, loyalty systems and analytics</li>
+            <li>We use escrow to ensure a smooth, secure transfer for both buyer and seller.</li>
+          </ul>
+
+          <div class="resources" aria-labelledby="resources-title">
+            <div id="resources-title" style="font-weight:800; margin-bottom:8px">Helpful resource</div>
+            <div><a href="https://corelli.com/domains.html" target="_blank" rel="noopener noreferrer">How To Choose A Domain Name</a></div>
+          </div>
+        </article>
+      </div>
+
+      <aside class="contact-card" aria-label="Contact & offer">
+        <div>
+          <h3 style="margin-top:0">Contact & Offer</h3>
+          <p style="margin-top:6px;color:var(--muted)">Submit an offer — this form opens your email client with the details prefilled. Or email <a href="mailto:domain@order.cafe" class="contact-email">domain@order.cafe</a>.</p>
+
+          <form id="inquiryForm" onsubmit="handleSubmit(event)" aria-label="Domain offer form">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="offer">Your offer (USD)</label>
+            <input id="offer" name="offer" type="text" placeholder="Enter your offer (USD)" required />
+
+            <label for="company">Company (optional)</label>
+            <input id="company" name="company" type="text" placeholder="Your company or organization" />
+
+            <label for="country">Country</label>
+            <input id="country" name="country" type="text" placeholder="Your country" required />
+
+            <label for="phone">Phone number (optional)</label>
+            <input id="phone" name="phone" type="tel" />
+
+            <label for="message">Message (questions, timeline, escrow preference)</label>
+            <textarea id="message" name="message" placeholder="Hi — I'm submitting an offer for Order.cafe. Please share transfer instructions and next steps."></textarea>
+
+            <button class="btn btn-primary" type="submit" style="width:100%; margin-top:6px">Send Offer</button>
+          </form>
+
+          <footer style="margin-top:10px; text-align:left; color:var(--muted); font-size:13px">
+            Prefer a direct email? <a href="mailto:domain@order.cafe" style="color:var(--accent)" class="contact-email">domain@order.cafe</a>
+          </footer>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      &copy; 2025 Order.cafe. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // floating cafe badges: cup, croissant, bag, pin (data-URI SVGs)
+    (function placeFloaters(){
+      const layer = document.getElementById('floaters');
+      if(!layer) return;
+
+      const svgs = {
+        cup: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M12 18h28v10a12 12 0 0 1-12 12H20a12 12 0 0 1-8-4V18z' fill='%23FFFFFF' stroke='%23000000' stroke-opacity='0.04'/><path d='M44 22a6 6 0 0 1 0 12' fill='%23FFEFD9'/></svg>`),
+        croissant: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M10 36c6-18 34-26 44-12 0 0-6 18-28 26-18 6-18-14-16-14z' fill='%23FFF1D6'/></svg>`),
+        bag: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect x='12' y='18' width='40' height='28' rx='6' fill='%23FFFFFF' stroke='%23000000' stroke-opacity='0.04'/></svg>`),
+        pin: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path d='M24 6c-8 12-12 18-12 24 0 8 12 16 12 16s12-8 12-16c0-6-4-12-12-24z' fill='%23FFD6B3'/></svg>`)
+      };
+
+      const items = [
+        {svg:svgs.cup, left:'12%', top:'18%', size:84, dur:9000},
+        {svg:svgs.croissant, left:'78%', top:'16%', size:72, dur:11000},
+        {svg:svgs.bag, left:'48%', top:'66%', size:72, dur:10000},
+        {svg:svgs.pin, left:'84%', top:'54%', size:64, dur:12000}
+      ];
+
+      items.forEach(it=>{
+        const el = document.createElement('div');
+        el.className = 'badge';
+        el.style.left = it.left;
+        el.style.top = it.top;
+        el.style.width = it.size + 'px';
+        el.style.height = it.size + 'px';
+        el.style.backgroundImage = `url("data:image/svg+xml;utf8,${it.svg}")`;
+        el.style.animation = `floaty ${it.dur}ms ease-in-out ${Math.random()*1200}ms infinite`;
+        el.style.opacity = 0.06 + Math.random()*0.18;
+        layer.appendChild(el);
+      });
+    })();
+
+    // Compose mailto and open user's email client with form contents
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const offer = document.getElementById('offer').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const country = document.getElementById('country').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Domain Offer - Order.cafe');
+      const bodyText =
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Company: ${company || '(not provided)'}\n` +
+        `Offer (USD): ${offer}\n` +
+        `Country: ${country}\n` +
+        `Phone: ${phone || '(not provided)'}\n\n` +
+        `Message:\n${message}\n\n---\nSent from Order.cafe offer form`;
+
+      window.location.href = `mailto:domain@order.cafe?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
+    }
+
+    document.getElementById('inquiryForm').addEventListener('submit', handleSubmit);
+
+    // Inquire button: scroll to form on mobile, open mailto on desktop
+    document.getElementById('inquireBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const form = document.getElementById('inquiryForm');
+      if(window.innerWidth < 900){
+        form.scrollIntoView({behavior:'smooth', block:'center'});
+        form.querySelector('input')?.focus();
+      } else {
+        const subject = encodeURIComponent('Domain Offer - Order.cafe');
+        const body = encodeURIComponent('Hi — I would like to make an offer for Order.cafe. Please reply with transfer instructions and next steps.');
+        window.location.href = `mailto:domain@order.cafe?subject=${subject}&body=${body}`;
+      }
+    });
+  </script>
+</body>
+</html>
